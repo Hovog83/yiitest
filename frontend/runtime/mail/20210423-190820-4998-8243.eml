@@ -1,0 +1,54 @@
+Message-ID: <2ad3970134b72fa8ba903200be8036ce@test.owl>
+Date: Fri, 23 Apr 2021 19:08:20 +0000
+Subject: Account registration at My Application
+From: My Application robot <support@example.com>
+To: test@test.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_1619204900_48b5c6a0eb9e5f3a63b74cfcfff93a3c_=_"
+
+
+--_=_swift_1619204900_48b5c6a0eb9e5f3a63b74cfcfff93a3c_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+Hello test,
+
+Follow the link below to verify your email:
+
+http:/=
+/test.owl/site/verify-email?token=3DeBD1v7GCGHcr8kd24jVYVVIQ1yYt_vuS_161920=
+4899
+
+--_=_swift_1619204900_48b5c6a0eb9e5f3a63b74cfcfff93a3c_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/=
+xhtml">
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/ht=
+ml; charset=3DUTF-8" />
+    <title></title>
+    </head>
+<body>
+    =
+    <div class=3D"verify-email">
+    <p>Hello test,</p>
+
+    <p>Follo=
+w the link below to verify your email:</p>
+
+    <p><a href=3D"http://te=
+st.owl/site/verify-email?token=3DeBD1v7GCGHcr8kd24jVYVVIQ1yYt_vuS_161920489=
+9">http://test.owl/site/verify-email?token=3DeBD1v7GCGHcr8kd24jVYVVIQ1yYt_v=
+uS_1619204899</a></p>
+</div>
+    </body>
+</html>
+
+
+--_=_swift_1619204900_48b5c6a0eb9e5f3a63b74cfcfff93a3c_=_--

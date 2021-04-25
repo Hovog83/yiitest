@@ -1,0 +1,23 @@
+Message-ID: <7d723524aea669c2798edbdcfa71af69@test.owl>
+Date: Sat, 24 Apr 2021 15:18:36 +0000
+Subject: Message subject
+From: from@domain.com
+To: to@domain.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_1619277516_2fe9d27f22976d6ca1a8dfc80e359ced_=_"
+
+
+--_=_swift_1619277516_2fe9d27f22976d6ca1a8dfc80e359ced_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Plain text content
+
+--_=_swift_1619277516_2fe9d27f22976d6ca1a8dfc80e359ced_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<b>HTML content</b>
+
+--_=_swift_1619277516_2fe9d27f22976d6ca1a8dfc80e359ced_=_--

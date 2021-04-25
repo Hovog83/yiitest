@@ -1,0 +1,2743 @@
+2021-04-23 18:08:21 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Connection.php:721
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Connection.php(721): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Connection.php(640): yii\db\Connection->createPdoInstance()
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#16 /usr/local/var/www/yii2/tumo/common/models/User.php(85): yii\db\BaseActiveRecord::findOne(Array)
+#17 /usr/local/var/www/yii2/tumo/common/models/LoginForm.php(73): common\models\User::findByUsername('asd')
+#18 /usr/local/var/www/yii2/tumo/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#19 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/validators/InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'asd')
+#20 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#21 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#22 /usr/local/var/www/yii2/tumo/common/models/LoginForm.php(58): yii\base\Model->validate()
+#23 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(92): common\models\LoginForm->login()
+#24 [internal function]: frontend\controllers\SiteController->actionLogin()
+#25 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#26 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#27 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('login', Array)
+#28 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#29 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Connection.php:651
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Connection.php(1063): yii\db\Connection->open()
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Command.php(261): yii\db\Connection->getSlavePdo()
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Command.php(1163): yii\db\Command->prepare(true)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#14 /usr/local/var/www/yii2/tumo/common/models/User.php(85): yii\db\BaseActiveRecord::findOne(Array)
+#15 /usr/local/var/www/yii2/tumo/common/models/LoginForm.php(73): common\models\User::findByUsername('asd')
+#16 /usr/local/var/www/yii2/tumo/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#17 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/validators/InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'asd')
+#18 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#19 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#20 /usr/local/var/www/yii2/tumo/common/models/LoginForm.php(58): yii\base\Model->validate()
+#21 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(92): common\models\LoginForm->login()
+#22 [internal function]: frontend\controllers\SiteController->actionLogin()
+#23 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#24 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#25 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('login', Array)
+#26 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#27 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1049
+    [2] => Unknown database 'yii2advanced'
+)
+
+2021-04-23 18:08:21 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-frontend' => 'WjwoagRb90SgKevzAfnLF-w5VBjI6MTQ8-N_m-ke9XwUcWU-MAyZINRAgJJQwJFDgFYndvGrsuKG1kzLhV2hEA=='
+    'LoginForm' => [
+        'username' => 'asd'
+        'password' => 'asd'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    'advanced-frontend' => '3l3lvdvbup21e3irtta1pkm2rl'
+    '_csrf-frontend' => '394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl\";}'
+    'advanced-backend' => '0vf0olocbsu2h9h1e25lqb7e1r'
+    '_csrf-backend' => '6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8-ZBfukUktO0_F251oK4IJtKIiXiOsJK\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'lrkocv'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; advanced-frontend=3l3lvdvbup21e3irtta1pkm2rl; _csrf-frontend=394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl%22%3B%7D; advanced-backend=0vf0olocbsu2h9h1e25lqb7e1r; _csrf-backend=6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228-ZBfukUktO0_F251oK4IJtKIiXiOsJK%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/site/login'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://test.owl'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_LENGTH' => '233'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53719'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => '233'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619201301.9091
+    'REQUEST_TIME' => 1619201301
+]
+2021-04-23 18:09:39 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The table does not exist: {{%user}} in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/ActiveRecord.php:438
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#4 /usr/local/var/www/yii2/tumo/common/models/User.php(85): yii\db\BaseActiveRecord::findOne(Array)
+#5 /usr/local/var/www/yii2/tumo/common/models/LoginForm.php(73): common\models\User::findByUsername('asd')
+#6 /usr/local/var/www/yii2/tumo/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/validators/InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'asd')
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#10 /usr/local/var/www/yii2/tumo/common/models/LoginForm.php(58): yii\base\Model->validate()
+#11 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(92): common\models\LoginForm->login()
+#12 [internal function]: frontend\controllers\SiteController->actionLogin()
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#15 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('login', Array)
+#16 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#17 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#19 {main}
+2021-04-23 18:09:39 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-frontend' => 'WjwoagRb90SgKevzAfnLF-w5VBjI6MTQ8-N_m-ke9XwUcWU-MAyZINRAgJJQwJFDgFYndvGrsuKG1kzLhV2hEA=='
+    'LoginForm' => [
+        'username' => 'asd'
+        'password' => 'asd'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    'advanced-frontend' => '3l3lvdvbup21e3irtta1pkm2rl'
+    '_csrf-frontend' => '394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl\";}'
+    'advanced-backend' => '0vf0olocbsu2h9h1e25lqb7e1r'
+    '_csrf-backend' => '6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8-ZBfukUktO0_F251oK4IJtKIiXiOsJK\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'lrkocv'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; advanced-frontend=3l3lvdvbup21e3irtta1pkm2rl; _csrf-frontend=394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl%22%3B%7D; advanced-backend=0vf0olocbsu2h9h1e25lqb7e1r; _csrf-backend=6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228-ZBfukUktO0_F251oK4IJtKIiXiOsJK%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/site/login'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ORIGIN' => 'http://test.owl'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_LENGTH' => '233'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53751'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => '233'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619201379.2863
+    'REQUEST_TIME' => 1619201379
+]
+2021-04-23 19:48:32 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][error][Error] Error: Typed property common\models\LoginForm::$username must not be accessed before initialization in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php:2248
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1363): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\LoginForm), 'username')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1419): yii\helpers\BaseHtml::activeInput('text', Object(common\models\LoginForm), 'username', Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(common\models\LoginForm), 'username', Array)
+#3 /usr/local/var/www/yii2/tumo/frontend/views/site/login.php(22): yii\widgets\ActiveField->textInput(Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('login', Array, Object(frontend\controllers\SiteController))
+#8 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(98): yii\base\Controller->render('login', Array)
+#9 [internal function]: frontend\controllers\SiteController->actionLogin()
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('login', Array)
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#16 {main}
+2021-04-23 19:48:32 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    'advanced-frontend' => '3l3lvdvbup21e3irtta1pkm2rl'
+    '_csrf-frontend' => '394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl\";}'
+    'advanced-backend' => '0vf0olocbsu2h9h1e25lqb7e1r'
+    '_csrf-backend' => '6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8-ZBfukUktO0_F251oK4IJtKIiXiOsJK\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'lrkocv'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; advanced-frontend=3l3lvdvbup21e3irtta1pkm2rl; _csrf-frontend=394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl%22%3B%7D; advanced-backend=0vf0olocbsu2h9h1e25lqb7e1r; _csrf-backend=6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228-ZBfukUktO0_F251oK4IJtKIiXiOsJK%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55077'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619207312.0452
+    'REQUEST_TIME' => 1619207312
+]
+2021-04-23 19:48:58 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][error][Error] Error: Typed property common\models\LoginForm::$username must not be accessed before initialization in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php:2248
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1363): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\LoginForm), 'username')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1419): yii\helpers\BaseHtml::activeInput('text', Object(common\models\LoginForm), 'username', Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(common\models\LoginForm), 'username', Array)
+#3 /usr/local/var/www/yii2/tumo/frontend/views/site/login.php(22): yii\widgets\ActiveField->textInput(Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('login', Array, Object(frontend\controllers\SiteController))
+#8 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(98): yii\base\Controller->render('login', Array)
+#9 [internal function]: frontend\controllers\SiteController->actionLogin()
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('login', Array)
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#16 {main}
+2021-04-23 19:48:58 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    'advanced-frontend' => '3l3lvdvbup21e3irtta1pkm2rl'
+    '_csrf-frontend' => '394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl\";}'
+    'advanced-backend' => '0vf0olocbsu2h9h1e25lqb7e1r'
+    '_csrf-backend' => '6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8-ZBfukUktO0_F251oK4IJtKIiXiOsJK\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'lrkocv'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; advanced-frontend=3l3lvdvbup21e3irtta1pkm2rl; _csrf-frontend=394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl%22%3B%7D; advanced-backend=0vf0olocbsu2h9h1e25lqb7e1r; _csrf-backend=6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228-ZBfukUktO0_F251oK4IJtKIiXiOsJK%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55076'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619207338.4915
+    'REQUEST_TIME' => 1619207338
+]
+2021-04-23 19:49:06 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][error][Error] Error: Typed property common\models\LoginForm::$username must not be accessed before initialization in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php:2248
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1363): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\LoginForm), 'username')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1419): yii\helpers\BaseHtml::activeInput('text', Object(common\models\LoginForm), 'username', Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(common\models\LoginForm), 'username', Array)
+#3 /usr/local/var/www/yii2/tumo/frontend/views/site/login.php(22): yii\widgets\ActiveField->textInput(Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('login', Array, Object(frontend\controllers\SiteController))
+#8 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(98): yii\base\Controller->render('login', Array)
+#9 [internal function]: frontend\controllers\SiteController->actionLogin()
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('login', Array)
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#16 {main}
+2021-04-23 19:49:06 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    'advanced-frontend' => '3l3lvdvbup21e3irtta1pkm2rl'
+    '_csrf-frontend' => '394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl\";}'
+    'advanced-backend' => '0vf0olocbsu2h9h1e25lqb7e1r'
+    '_csrf-backend' => '6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8-ZBfukUktO0_F251oK4IJtKIiXiOsJK\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'lrkocv'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; advanced-frontend=3l3lvdvbup21e3irtta1pkm2rl; _csrf-frontend=394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl%22%3B%7D; advanced-backend=0vf0olocbsu2h9h1e25lqb7e1r; _csrf-backend=6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228-ZBfukUktO0_F251oK4IJtKIiXiOsJK%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55076'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619207346.6537
+    'REQUEST_TIME' => 1619207346
+]
+2021-04-23 19:49:07 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][error][Error] Error: Typed property common\models\LoginForm::$username must not be accessed before initialization in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php:2248
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1363): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\LoginForm), 'username')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1419): yii\helpers\BaseHtml::activeInput('text', Object(common\models\LoginForm), 'username', Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(common\models\LoginForm), 'username', Array)
+#3 /usr/local/var/www/yii2/tumo/frontend/views/site/login.php(22): yii\widgets\ActiveField->textInput(Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('login', Array, Object(frontend\controllers\SiteController))
+#8 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(98): yii\base\Controller->render('login', Array)
+#9 [internal function]: frontend\controllers\SiteController->actionLogin()
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('login', Array)
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#16 {main}
+2021-04-23 19:49:07 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    'advanced-frontend' => '3l3lvdvbup21e3irtta1pkm2rl'
+    '_csrf-frontend' => '394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl\";}'
+    'advanced-backend' => '0vf0olocbsu2h9h1e25lqb7e1r'
+    '_csrf-backend' => '6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8-ZBfukUktO0_F251oK4IJtKIiXiOsJK\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'lrkocv'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; advanced-frontend=3l3lvdvbup21e3irtta1pkm2rl; _csrf-frontend=394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl%22%3B%7D; advanced-backend=0vf0olocbsu2h9h1e25lqb7e1r; _csrf-backend=6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228-ZBfukUktO0_F251oK4IJtKIiXiOsJK%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55076'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619207347.5199
+    'REQUEST_TIME' => 1619207347
+]
+2021-04-23 19:49:37 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][error][Error] Error: Typed property common\models\LoginForm::$username must not be accessed before initialization in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php:2248
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1363): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\LoginForm), 'username')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1419): yii\helpers\BaseHtml::activeInput('text', Object(common\models\LoginForm), 'username', Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(common\models\LoginForm), 'username', Array)
+#3 /usr/local/var/www/yii2/tumo/frontend/views/site/login.php(22): yii\widgets\ActiveField->textInput(Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('login', Array, Object(frontend\controllers\SiteController))
+#8 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(98): yii\base\Controller->render('login', Array)
+#9 [internal function]: frontend\controllers\SiteController->actionLogin()
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('login', Array)
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#16 {main}
+2021-04-23 19:49:37 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    'advanced-frontend' => '3l3lvdvbup21e3irtta1pkm2rl'
+    '_csrf-frontend' => '394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl\";}'
+    'advanced-backend' => '0vf0olocbsu2h9h1e25lqb7e1r'
+    '_csrf-backend' => '6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8-ZBfukUktO0_F251oK4IJtKIiXiOsJK\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'lrkocv'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; advanced-frontend=3l3lvdvbup21e3irtta1pkm2rl; _csrf-frontend=394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl%22%3B%7D; advanced-backend=0vf0olocbsu2h9h1e25lqb7e1r; _csrf-backend=6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228-ZBfukUktO0_F251oK4IJtKIiXiOsJK%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55076'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619207377.1735
+    'REQUEST_TIME' => 1619207377
+]
+2021-04-23 19:49:37 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][error][Error] Error: Typed property common\models\LoginForm::$username must not be accessed before initialization in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php:2248
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1363): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\LoginForm), 'username')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1419): yii\helpers\BaseHtml::activeInput('text', Object(common\models\LoginForm), 'username', Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(common\models\LoginForm), 'username', Array)
+#3 /usr/local/var/www/yii2/tumo/frontend/views/site/login.php(22): yii\widgets\ActiveField->textInput(Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('login', Array, Object(frontend\controllers\SiteController))
+#8 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(98): yii\base\Controller->render('login', Array)
+#9 [internal function]: frontend\controllers\SiteController->actionLogin()
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('login', Array)
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#16 {main}
+2021-04-23 19:49:37 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    'advanced-frontend' => '3l3lvdvbup21e3irtta1pkm2rl'
+    '_csrf-frontend' => '394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl\";}'
+    'advanced-backend' => '0vf0olocbsu2h9h1e25lqb7e1r'
+    '_csrf-backend' => '6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8-ZBfukUktO0_F251oK4IJtKIiXiOsJK\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'lrkocv'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; advanced-frontend=3l3lvdvbup21e3irtta1pkm2rl; _csrf-frontend=394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl%22%3B%7D; advanced-backend=0vf0olocbsu2h9h1e25lqb7e1r; _csrf-backend=6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228-ZBfukUktO0_F251oK4IJtKIiXiOsJK%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55076'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619207377.8644
+    'REQUEST_TIME' => 1619207377
+]
+2021-04-23 19:49:38 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][error][Error] Error: Typed property common\models\LoginForm::$username must not be accessed before initialization in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php:2248
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1363): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\LoginForm), 'username')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1419): yii\helpers\BaseHtml::activeInput('text', Object(common\models\LoginForm), 'username', Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(common\models\LoginForm), 'username', Array)
+#3 /usr/local/var/www/yii2/tumo/frontend/views/site/login.php(22): yii\widgets\ActiveField->textInput(Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('login', Array, Object(frontend\controllers\SiteController))
+#8 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(98): yii\base\Controller->render('login', Array)
+#9 [internal function]: frontend\controllers\SiteController->actionLogin()
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('login', Array)
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#16 {main}
+2021-04-23 19:49:38 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    'advanced-frontend' => '3l3lvdvbup21e3irtta1pkm2rl'
+    '_csrf-frontend' => '394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl\";}'
+    'advanced-backend' => '0vf0olocbsu2h9h1e25lqb7e1r'
+    '_csrf-backend' => '6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8-ZBfukUktO0_F251oK4IJtKIiXiOsJK\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'lrkocv'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; advanced-frontend=3l3lvdvbup21e3irtta1pkm2rl; _csrf-frontend=394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl%22%3B%7D; advanced-backend=0vf0olocbsu2h9h1e25lqb7e1r; _csrf-backend=6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228-ZBfukUktO0_F251oK4IJtKIiXiOsJK%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55076'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619207378.071
+    'REQUEST_TIME' => 1619207378
+]
+2021-04-23 19:49:38 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][error][Error] Error: Typed property common\models\LoginForm::$username must not be accessed before initialization in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php:2248
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1363): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\LoginForm), 'username')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1419): yii\helpers\BaseHtml::activeInput('text', Object(common\models\LoginForm), 'username', Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(common\models\LoginForm), 'username', Array)
+#3 /usr/local/var/www/yii2/tumo/frontend/views/site/login.php(22): yii\widgets\ActiveField->textInput(Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('login', Array, Object(frontend\controllers\SiteController))
+#8 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(98): yii\base\Controller->render('login', Array)
+#9 [internal function]: frontend\controllers\SiteController->actionLogin()
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('login', Array)
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#16 {main}
+2021-04-23 19:49:38 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    'advanced-frontend' => '3l3lvdvbup21e3irtta1pkm2rl'
+    '_csrf-frontend' => '394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl\";}'
+    'advanced-backend' => '0vf0olocbsu2h9h1e25lqb7e1r'
+    '_csrf-backend' => '6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8-ZBfukUktO0_F251oK4IJtKIiXiOsJK\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'lrkocv'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; advanced-frontend=3l3lvdvbup21e3irtta1pkm2rl; _csrf-frontend=394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl%22%3B%7D; advanced-backend=0vf0olocbsu2h9h1e25lqb7e1r; _csrf-backend=6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228-ZBfukUktO0_F251oK4IJtKIiXiOsJK%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55076'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619207378.2113
+    'REQUEST_TIME' => 1619207378
+]
+2021-04-23 19:49:48 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][error][Error] Error: Typed property common\models\LoginForm::$username must not be accessed before initialization in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php:2248
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1363): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\LoginForm), 'username')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1419): yii\helpers\BaseHtml::activeInput('text', Object(common\models\LoginForm), 'username', Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(common\models\LoginForm), 'username', Array)
+#3 /usr/local/var/www/yii2/tumo/frontend/views/site/login.php(22): yii\widgets\ActiveField->textInput(Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('login', Array, Object(frontend\controllers\SiteController))
+#8 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(98): yii\base\Controller->render('login', Array)
+#9 [internal function]: frontend\controllers\SiteController->actionLogin()
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('login', Array)
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#16 {main}
+2021-04-23 19:49:48 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    'advanced-frontend' => '3l3lvdvbup21e3irtta1pkm2rl'
+    '_csrf-frontend' => '394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl\";}'
+    'advanced-backend' => '0vf0olocbsu2h9h1e25lqb7e1r'
+    '_csrf-backend' => '6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8-ZBfukUktO0_F251oK4IJtKIiXiOsJK\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'lrkocv'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; advanced-frontend=3l3lvdvbup21e3irtta1pkm2rl; _csrf-frontend=394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl%22%3B%7D; advanced-backend=0vf0olocbsu2h9h1e25lqb7e1r; _csrf-backend=6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228-ZBfukUktO0_F251oK4IJtKIiXiOsJK%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55076'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619207388.355
+    'REQUEST_TIME' => 1619207388
+]
+2021-04-23 19:50:46 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][error][TypeError] TypeError: Argument 2 passed to common\models\LoginForm::validatePassword() must be of the type array, null given, called in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/validators/InlineValidator.php on line 84 and defined in /usr/local/var/www/yii2/tumo/common/models/LoginForm.php:38
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/validators/InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), '123456')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#3 /usr/local/var/www/yii2/tumo/common/models/LoginForm.php(55): yii\base\Model->validate()
+#4 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(92): common\models\LoginForm->login()
+#5 [internal function]: frontend\controllers\SiteController->actionLogin()
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('login', Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#12 {main}
+2021-04-23 19:50:46 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-frontend' => 'tgy6LqX3_6WNjornyQKh3wGWp7xnHOVdioPyYspBorf4Qfd6kaCRwfnn4YaYO_uLbfnU0l5fk2__tsEypgL22w=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => '123456'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    'advanced-frontend' => '3l3lvdvbup21e3irtta1pkm2rl'
+    '_csrf-frontend' => '394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl\";}'
+    'advanced-backend' => '0vf0olocbsu2h9h1e25lqb7e1r'
+    '_csrf-backend' => '6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8-ZBfukUktO0_F251oK4IJtKIiXiOsJK\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'lrkocv'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; advanced-frontend=3l3lvdvbup21e3irtta1pkm2rl; _csrf-frontend=394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl%22%3B%7D; advanced-backend=0vf0olocbsu2h9h1e25lqb7e1r; _csrf-backend=6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228-ZBfukUktO0_F251oK4IJtKIiXiOsJK%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/site/login'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://test.owl'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_LENGTH' => '238'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55076'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => '238'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619207446.0643
+    'REQUEST_TIME' => 1619207446
+]
+2021-04-23 19:51:03 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][error][Error] Error: Typed property common\models\LoginForm::$_user must not be accessed before initialization in /usr/local/var/www/yii2/tumo/common/models/LoginForm.php:69
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/common/models/LoginForm.php(41): common\models\LoginForm->getUser()
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/validators/InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), '123456')
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#4 /usr/local/var/www/yii2/tumo/common/models/LoginForm.php(55): yii\base\Model->validate()
+#5 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(92): common\models\LoginForm->login()
+#6 [internal function]: frontend\controllers\SiteController->actionLogin()
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('login', Array)
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#13 {main}
+2021-04-23 19:51:03 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-frontend' => 'tgy6LqX3_6WNjornyQKh3wGWp7xnHOVdioPyYspBorf4Qfd6kaCRwfnn4YaYO_uLbfnU0l5fk2__tsEypgL22w=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => '123456'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    'advanced-frontend' => '3l3lvdvbup21e3irtta1pkm2rl'
+    '_csrf-frontend' => '394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl\";}'
+    'advanced-backend' => '0vf0olocbsu2h9h1e25lqb7e1r'
+    '_csrf-backend' => '6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8-ZBfukUktO0_F251oK4IJtKIiXiOsJK\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'lrkocv'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; advanced-frontend=3l3lvdvbup21e3irtta1pkm2rl; _csrf-frontend=394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl%22%3B%7D; advanced-backend=0vf0olocbsu2h9h1e25lqb7e1r; _csrf-backend=6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228-ZBfukUktO0_F251oK4IJtKIiXiOsJK%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/site/login'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ORIGIN' => 'http://test.owl'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_LENGTH' => '238'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55076'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => '238'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619207463.9242
+    'REQUEST_TIME' => 1619207463
+]
+2021-04-23 19:51:32 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][error][Error] Error: Typed property common\models\LoginForm::$_user must not be accessed before initialization in /usr/local/var/www/yii2/tumo/common/models/LoginForm.php:69
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/common/models/LoginForm.php(41): common\models\LoginForm->getUser()
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/validators/InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), '123456')
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#4 /usr/local/var/www/yii2/tumo/common/models/LoginForm.php(55): yii\base\Model->validate()
+#5 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(92): common\models\LoginForm->login()
+#6 [internal function]: frontend\controllers\SiteController->actionLogin()
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('login', Array)
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#13 {main}
+2021-04-23 19:51:32 [127.0.0.1][-][3l3lvdvbup21e3irtta1pkm2rl][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-frontend' => 'tgy6LqX3_6WNjornyQKh3wGWp7xnHOVdioPyYspBorf4Qfd6kaCRwfnn4YaYO_uLbfnU0l5fk2__tsEypgL22w=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => '123456'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    'advanced-frontend' => '3l3lvdvbup21e3irtta1pkm2rl'
+    '_csrf-frontend' => '394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl\";}'
+    'advanced-backend' => '0vf0olocbsu2h9h1e25lqb7e1r'
+    '_csrf-backend' => '6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8-ZBfukUktO0_F251oK4IJtKIiXiOsJK\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'lrkocv'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; advanced-frontend=3l3lvdvbup21e3irtta1pkm2rl; _csrf-frontend=394656acd15a141bfbf2c2f27b6740d45d1660d917b3abcb180f78338ffc0e79a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22NMMT4WndtikaQ9ZTlosn9Cv2u53PlCTl%22%3B%7D; advanced-backend=0vf0olocbsu2h9h1e25lqb7e1r; _csrf-backend=6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228-ZBfukUktO0_F251oK4IJtKIiXiOsJK%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/site/login'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ORIGIN' => 'http://test.owl'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_LENGTH' => '238'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55076'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => '238'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619207492.348
+    'REQUEST_TIME' => 1619207492
+]
+2021-04-23 19:52:13 [127.0.0.1][-][a14rhko4aei74v0m2ragkncfpp][error][Error] Error: Typed property common\models\LoginForm::$_user must not be accessed before initialization in /usr/local/var/www/yii2/tumo/common/models/LoginForm.php:69
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/common/models/LoginForm.php(41): common\models\LoginForm->getUser()
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/validators/InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), '123456')
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#4 /usr/local/var/www/yii2/tumo/common/models/LoginForm.php(55): yii\base\Model->validate()
+#5 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(92): common\models\LoginForm->login()
+#6 [internal function]: frontend\controllers\SiteController->actionLogin()
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('login', Array)
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#13 {main}
+2021-04-23 19:52:13 [127.0.0.1][-][a14rhko4aei74v0m2ragkncfpp][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-frontend' => 'VkCaLw9omS4m0wtPyyD_X4lQf4owrtB0Bd7oXwbeHFw0Bt5gQBLcHheJWz2Zdasy7Toc7nmYqTp9m6U4VbBFDQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => '123456'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    'advanced-backend' => '0vf0olocbsu2h9h1e25lqb7e1r'
+    '_csrf-backend' => '6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8-ZBfukUktO0_F251oK4IJtKIiXiOsJK\";}'
+    '_csrf-frontend' => '33741b5e443679166cf06750b4b9d6f22613ce774d502d9be47db29f90fa6026a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"bFDOOzE01ZPrRUTmdjcdI6yNxEMgSnYQ\";}'
+    'advanced-frontend' => 'a14rhko4aei74v0m2ragkncfpp'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; advanced-backend=0vf0olocbsu2h9h1e25lqb7e1r; _csrf-backend=6b22c7418d67739bed979f894f3f732b9501912acdc00959e98586910ec0130ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228-ZBfukUktO0_F251oK4IJtKIiXiOsJK%22%3B%7D; _csrf-frontend=33741b5e443679166cf06750b4b9d6f22613ce774d502d9be47db29f90fa6026a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22bFDOOzE01ZPrRUTmdjcdI6yNxEMgSnYQ%22%3B%7D; advanced-frontend=a14rhko4aei74v0m2ragkncfpp'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/site/login'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://test.owl'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_LENGTH' => '238'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55076'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => '238'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619207533.4878
+    'REQUEST_TIME' => 1619207533
+]
+2021-04-23 20:09:19 [127.0.0.1][1][sg2d8keaol8lhjctj6ss411508][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to perform this action. in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/filters/AccessControl.php:158
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Component.php(628): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(300): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Controller.php(216): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(179): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('signup', Array)
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/signup', Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+2021-04-23 20:09:19 [127.0.0.1][1][sg2d8keaol8lhjctj6ss411508][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    'advanced-frontend' => 'sg2d8keaol8lhjctj6ss411508'
+    '_identity-frontend' => 'a51ea2e9f0e219f6c13d3e19854bc53bd19cf0ac8926adf6f594a3dcb155e76aa:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"wGUmwBUhGblkK4Ww_YAf2spx7PiK8YyY\",2592000]\";}'
+    '_csrf-frontend' => '0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pJ23prA83UqDf3q7P79oxMtC6F6migiH\";}'
+    '_csrf-backend' => '6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu\";}'
+    'advanced-backend' => 'pdjmo65b2g4tc3nai53jffl56h'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'wGUmwBUhGblkK4Ww_YAf2spx7PiK8YyY'
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; advanced-frontend=sg2d8keaol8lhjctj6ss411508; _identity-frontend=a51ea2e9f0e219f6c13d3e19854bc53bd19cf0ac8926adf6f594a3dcb155e76aa%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22wGUmwBUhGblkK4Ww_YAf2spx7PiK8YyY%22%2C2592000%5D%22%3B%7D; _csrf-frontend=0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pJ23prA83UqDf3q7P79oxMtC6F6migiH%22%3B%7D; _csrf-backend=6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu%22%3B%7D; advanced-backend=pdjmo65b2g4tc3nai53jffl56h'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55430'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/signup'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619208559.7367
+    'REQUEST_TIME' => 1619208559
+]
+2021-04-23 20:09:21 [127.0.0.1][1][sg2d8keaol8lhjctj6ss411508][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to perform this action. in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/filters/AccessControl.php:158
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Component.php(628): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(300): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Controller.php(216): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(179): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('signup', Array)
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/signup', Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#11 {main}
+2021-04-23 20:09:21 [127.0.0.1][1][sg2d8keaol8lhjctj6ss411508][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    'advanced-frontend' => 'sg2d8keaol8lhjctj6ss411508'
+    '_identity-frontend' => 'a51ea2e9f0e219f6c13d3e19854bc53bd19cf0ac8926adf6f594a3dcb155e76aa:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"wGUmwBUhGblkK4Ww_YAf2spx7PiK8YyY\",2592000]\";}'
+    '_csrf-frontend' => '0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pJ23prA83UqDf3q7P79oxMtC6F6migiH\";}'
+    '_csrf-backend' => '6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu\";}'
+    'advanced-backend' => 'pdjmo65b2g4tc3nai53jffl56h'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'wGUmwBUhGblkK4Ww_YAf2spx7PiK8YyY'
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; advanced-frontend=sg2d8keaol8lhjctj6ss411508; _identity-frontend=a51ea2e9f0e219f6c13d3e19854bc53bd19cf0ac8926adf6f594a3dcb155e76aa%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22wGUmwBUhGblkK4Ww_YAf2spx7PiK8YyY%22%2C2592000%5D%22%3B%7D; _csrf-frontend=0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pJ23prA83UqDf3q7P79oxMtC6F6migiH%22%3B%7D; _csrf-backend=6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu%22%3B%7D; advanced-backend=pdjmo65b2g4tc3nai53jffl56h'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55430'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/signup'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619208561.5121
+    'REQUEST_TIME' => 1619208561
+]
+2021-04-23 20:46:31 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][error][Error] Error: Typed property frontend\models\SignupForm::$username must not be accessed before initialization in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php:2248
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1363): yii\helpers\BaseHtml::getAttributeValue(Object(frontend\models\SignupForm), 'username')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1419): yii\helpers\BaseHtml::activeInput('text', Object(frontend\models\SignupForm), 'username', Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(frontend\models\SignupForm), 'username', Array)
+#3 /usr/local/var/www/yii2/tumo/frontend/views/site/signup.php(22): yii\widgets\ActiveField->textInput(Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('signup', Array, Object(frontend\controllers\SiteController))
+#8 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(162): yii\base\Controller->render('signup', Array)
+#9 [internal function]: frontend\controllers\SiteController->actionSignup()
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('signup', Array)
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/signup', Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#16 {main}
+2021-04-23 20:46:31 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    '_csrf-frontend' => '0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pJ23prA83UqDf3q7P79oxMtC6F6migiH\";}'
+    '_csrf-backend' => '6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu\";}'
+    'advanced-backend' => 'pdjmo65b2g4tc3nai53jffl56h'
+    'advanced-frontend' => 'mre4r3p2mh0o4s3gdrnhm8dsek'
+    'PHPFRONTSESSID' => 're3kke5rab2vkcv3fh7q3ui1lv'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; _csrf-frontend=0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pJ23prA83UqDf3q7P79oxMtC6F6migiH%22%3B%7D; _csrf-backend=6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu%22%3B%7D; advanced-backend=pdjmo65b2g4tc3nai53jffl56h; advanced-frontend=mre4r3p2mh0o4s3gdrnhm8dsek; PHPFRONTSESSID=re3kke5rab2vkcv3fh7q3ui1lv'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '56075'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/signup'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619210791.2489
+    'REQUEST_TIME' => 1619210791
+]
+2021-04-23 20:46:32 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][error][Error] Error: Typed property frontend\models\SignupForm::$username must not be accessed before initialization in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php:2248
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1363): yii\helpers\BaseHtml::getAttributeValue(Object(frontend\models\SignupForm), 'username')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1419): yii\helpers\BaseHtml::activeInput('text', Object(frontend\models\SignupForm), 'username', Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(frontend\models\SignupForm), 'username', Array)
+#3 /usr/local/var/www/yii2/tumo/frontend/views/site/signup.php(22): yii\widgets\ActiveField->textInput(Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('signup', Array, Object(frontend\controllers\SiteController))
+#8 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(162): yii\base\Controller->render('signup', Array)
+#9 [internal function]: frontend\controllers\SiteController->actionSignup()
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('signup', Array)
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/signup', Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#16 {main}
+2021-04-23 20:46:32 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    '_csrf-frontend' => '0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pJ23prA83UqDf3q7P79oxMtC6F6migiH\";}'
+    '_csrf-backend' => '6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu\";}'
+    'advanced-backend' => 'pdjmo65b2g4tc3nai53jffl56h'
+    'advanced-frontend' => 'mre4r3p2mh0o4s3gdrnhm8dsek'
+    'PHPFRONTSESSID' => 're3kke5rab2vkcv3fh7q3ui1lv'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; _csrf-frontend=0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pJ23prA83UqDf3q7P79oxMtC6F6migiH%22%3B%7D; _csrf-backend=6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu%22%3B%7D; advanced-backend=pdjmo65b2g4tc3nai53jffl56h; advanced-frontend=mre4r3p2mh0o4s3gdrnhm8dsek; PHPFRONTSESSID=re3kke5rab2vkcv3fh7q3ui1lv'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '56075'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/signup'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619210792.6358
+    'REQUEST_TIME' => 1619210792
+]
+2021-04-23 20:46:45 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][error][Error] Error: Typed property frontend\models\SignupForm::$username must not be accessed before initialization in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php:2248
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1363): yii\helpers\BaseHtml::getAttributeValue(Object(frontend\models\SignupForm), 'username')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1419): yii\helpers\BaseHtml::activeInput('text', Object(frontend\models\SignupForm), 'username', Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(frontend\models\SignupForm), 'username', Array)
+#3 /usr/local/var/www/yii2/tumo/frontend/views/site/signup.php(22): yii\widgets\ActiveField->textInput(Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('signup', Array, Object(frontend\controllers\SiteController))
+#8 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(162): yii\base\Controller->render('signup', Array)
+#9 [internal function]: frontend\controllers\SiteController->actionSignup()
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('signup', Array)
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/signup', Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#16 {main}
+2021-04-23 20:46:45 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    '_csrf-frontend' => '0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pJ23prA83UqDf3q7P79oxMtC6F6migiH\";}'
+    '_csrf-backend' => '6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu\";}'
+    'advanced-backend' => 'pdjmo65b2g4tc3nai53jffl56h'
+    'advanced-frontend' => 'mre4r3p2mh0o4s3gdrnhm8dsek'
+    'PHPFRONTSESSID' => 're3kke5rab2vkcv3fh7q3ui1lv'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; _csrf-frontend=0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pJ23prA83UqDf3q7P79oxMtC6F6migiH%22%3B%7D; _csrf-backend=6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu%22%3B%7D; advanced-backend=pdjmo65b2g4tc3nai53jffl56h; advanced-frontend=mre4r3p2mh0o4s3gdrnhm8dsek; PHPFRONTSESSID=re3kke5rab2vkcv3fh7q3ui1lv'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '56075'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/signup'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619210805.4078
+    'REQUEST_TIME' => 1619210805
+]
+2021-04-23 20:46:54 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][error][yii\base\ErrorException:256] yii\base\ErrorException: Exception 'Error' with message 'Typed property frontend\models\SignupForm::$email must not be accessed before initialization' 
+
+in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php:2248
+
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1363): yii\helpers\BaseHtml::getAttributeValue(Object(frontend\models\SignupForm), 'email')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1419): yii\helpers\BaseHtml::activeInput('text', Object(frontend\models\SignupForm), 'email', Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(frontend\models\SignupForm), 'email', Array)
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(207): yii\widgets\ActiveField->textInput()
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2-bootstrap/src/ActiveField.php(187): yii\widgets\ActiveField->render(NULL)
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(176): yii\bootstrap\ActiveField->render()
+#6 /usr/local/var/www/yii2/tumo/frontend/views/site/signup.php(24): yii\widgets\ActiveField->__toString()
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('signup', Array, Object(frontend\controllers\SiteController))
+#11 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(162): yii\base\Controller->render('signup', Array)
+#12 [internal function]: frontend\controllers\SiteController->actionSignup()
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#15 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('signup', Array)
+#16 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/signup', Array)
+#17 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#19 {main} in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/ErrorHandler.php:343
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/ErrorHandler.php(343): yii\web\ErrorHandler->handleError('256', ''Exception \\'Er...', ''/usr/local/var...', '343', '['exception' =>...')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/ErrorHandler.php(343): ::trigger_error(''Exception \\'Er...', '256')
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(181): yii\base\ErrorHandler::convertExceptionToError('class Error { p...')
+#3 /usr/local/var/www/yii2/tumo/frontend/views/site/signup.php(24): yii\bootstrap\ActiveField->__toString()
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): yii\web\View->unknown()
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\web\View->renderPhpFile(''/usr/local/var...', '['model' => cla...')
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\web\View->renderFile(''/usr/local/var...', '['model' => cla...', 'class frontend\\...')
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\web\View->render(''signup'', '['model' => cla...', 'class frontend\\...')
+#8 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(162): frontend\controllers\SiteController->render(''signup'', '['model' => cla...')
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): frontend\controllers\SiteController->actionSignup()
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): ::call_user_func_array:{/usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php:57}('[0 => class fro...', '[]')
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams('[]')
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): frontend\controllers\SiteController->runAction(''signup'', '[]')
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\web\Application->runAction(''site/signup'', '[]')
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest('class yii\\web\\R...')
+#15 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\web\Application->run()
+#16 {main}
+2021-04-23 20:46:54 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    '_csrf-frontend' => '0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pJ23prA83UqDf3q7P79oxMtC6F6migiH\";}'
+    '_csrf-backend' => '6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu\";}'
+    'advanced-backend' => 'pdjmo65b2g4tc3nai53jffl56h'
+    'advanced-frontend' => 'mre4r3p2mh0o4s3gdrnhm8dsek'
+    'PHPFRONTSESSID' => 're3kke5rab2vkcv3fh7q3ui1lv'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; _csrf-frontend=0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pJ23prA83UqDf3q7P79oxMtC6F6migiH%22%3B%7D; _csrf-backend=6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu%22%3B%7D; advanced-backend=pdjmo65b2g4tc3nai53jffl56h; advanced-frontend=mre4r3p2mh0o4s3gdrnhm8dsek; PHPFRONTSESSID=re3kke5rab2vkcv3fh7q3ui1lv'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '56075'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/signup'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619210814.2682
+    'REQUEST_TIME' => 1619210814
+]
+2021-04-23 20:47:06 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][error][yii\base\ErrorException:256] yii\base\ErrorException: Exception 'Error' with message 'Typed property frontend\models\SignupForm::$email must not be accessed before initialization' 
+
+in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php:2248
+
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1363): yii\helpers\BaseHtml::getAttributeValue(Object(frontend\models\SignupForm), 'email')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1419): yii\helpers\BaseHtml::activeInput('text', Object(frontend\models\SignupForm), 'email', Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(frontend\models\SignupForm), 'email', Array)
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(207): yii\widgets\ActiveField->textInput()
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2-bootstrap/src/ActiveField.php(187): yii\widgets\ActiveField->render(NULL)
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(176): yii\bootstrap\ActiveField->render()
+#6 /usr/local/var/www/yii2/tumo/frontend/views/site/signup.php(24): yii\widgets\ActiveField->__toString()
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('signup', Array, Object(frontend\controllers\SiteController))
+#11 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(162): yii\base\Controller->render('signup', Array)
+#12 [internal function]: frontend\controllers\SiteController->actionSignup()
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#15 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('signup', Array)
+#16 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/signup', Array)
+#17 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#19 {main} in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/ErrorHandler.php:343
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/ErrorHandler.php(343): yii\web\ErrorHandler->handleError('256', ''Exception \\'Er...', ''/usr/local/var...', '343', '['exception' =>...')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/ErrorHandler.php(343): ::trigger_error(''Exception \\'Er...', '256')
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(181): yii\base\ErrorHandler::convertExceptionToError('class Error { p...')
+#3 /usr/local/var/www/yii2/tumo/frontend/views/site/signup.php(24): yii\bootstrap\ActiveField->__toString()
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): yii\web\View->unknown()
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\web\View->renderPhpFile(''/usr/local/var...', '['model' => cla...')
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\web\View->renderFile(''/usr/local/var...', '['model' => cla...', 'class frontend\\...')
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\web\View->render(''signup'', '['model' => cla...', 'class frontend\\...')
+#8 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(162): frontend\controllers\SiteController->render(''signup'', '['model' => cla...')
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): frontend\controllers\SiteController->actionSignup()
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): ::call_user_func_array:{/usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php:57}('[0 => class fro...', '[]')
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams('[]')
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): frontend\controllers\SiteController->runAction(''signup'', '[]')
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\web\Application->runAction(''site/signup'', '[]')
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest('class yii\\web\\R...')
+#15 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\web\Application->run()
+#16 {main}
+2021-04-23 20:47:06 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    '_csrf-frontend' => '0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pJ23prA83UqDf3q7P79oxMtC6F6migiH\";}'
+    '_csrf-backend' => '6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu\";}'
+    'advanced-backend' => 'pdjmo65b2g4tc3nai53jffl56h'
+    'advanced-frontend' => 'mre4r3p2mh0o4s3gdrnhm8dsek'
+    'PHPFRONTSESSID' => 're3kke5rab2vkcv3fh7q3ui1lv'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; _csrf-frontend=0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pJ23prA83UqDf3q7P79oxMtC6F6migiH%22%3B%7D; _csrf-backend=6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu%22%3B%7D; advanced-backend=pdjmo65b2g4tc3nai53jffl56h; advanced-frontend=mre4r3p2mh0o4s3gdrnhm8dsek; PHPFRONTSESSID=re3kke5rab2vkcv3fh7q3ui1lv'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '56075'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/signup'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619210826.3277
+    'REQUEST_TIME' => 1619210826
+]
+2021-04-23 20:47:07 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][error][yii\base\ErrorException:256] yii\base\ErrorException: Exception 'Error' with message 'Typed property frontend\models\SignupForm::$email must not be accessed before initialization' 
+
+in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php:2248
+
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1363): yii\helpers\BaseHtml::getAttributeValue(Object(frontend\models\SignupForm), 'email')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1419): yii\helpers\BaseHtml::activeInput('text', Object(frontend\models\SignupForm), 'email', Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(frontend\models\SignupForm), 'email', Array)
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(207): yii\widgets\ActiveField->textInput()
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2-bootstrap/src/ActiveField.php(187): yii\widgets\ActiveField->render(NULL)
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(176): yii\bootstrap\ActiveField->render()
+#6 /usr/local/var/www/yii2/tumo/frontend/views/site/signup.php(24): yii\widgets\ActiveField->__toString()
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('signup', Array, Object(frontend\controllers\SiteController))
+#11 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(162): yii\base\Controller->render('signup', Array)
+#12 [internal function]: frontend\controllers\SiteController->actionSignup()
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#15 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('signup', Array)
+#16 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/signup', Array)
+#17 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#19 {main} in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/ErrorHandler.php:343
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/ErrorHandler.php(343): yii\web\ErrorHandler->handleError('256', ''Exception \\'Er...', ''/usr/local/var...', '343', '['exception' =>...')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/ErrorHandler.php(343): ::trigger_error(''Exception \\'Er...', '256')
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(181): yii\base\ErrorHandler::convertExceptionToError('class Error { p...')
+#3 /usr/local/var/www/yii2/tumo/frontend/views/site/signup.php(24): yii\bootstrap\ActiveField->__toString()
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): yii\web\View->unknown()
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\web\View->renderPhpFile(''/usr/local/var...', '['model' => cla...')
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\web\View->renderFile(''/usr/local/var...', '['model' => cla...', 'class frontend\\...')
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\web\View->render(''signup'', '['model' => cla...', 'class frontend\\...')
+#8 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(162): frontend\controllers\SiteController->render(''signup'', '['model' => cla...')
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): frontend\controllers\SiteController->actionSignup()
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): ::call_user_func_array:{/usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php:57}('[0 => class fro...', '[]')
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams('[]')
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): frontend\controllers\SiteController->runAction(''signup'', '[]')
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\web\Application->runAction(''site/signup'', '[]')
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest('class yii\\web\\R...')
+#15 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\web\Application->run()
+#16 {main}
+2021-04-23 20:47:07 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    '_csrf-frontend' => '0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pJ23prA83UqDf3q7P79oxMtC6F6migiH\";}'
+    '_csrf-backend' => '6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu\";}'
+    'advanced-backend' => 'pdjmo65b2g4tc3nai53jffl56h'
+    'advanced-frontend' => 'mre4r3p2mh0o4s3gdrnhm8dsek'
+    'PHPFRONTSESSID' => 're3kke5rab2vkcv3fh7q3ui1lv'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; _csrf-frontend=0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pJ23prA83UqDf3q7P79oxMtC6F6migiH%22%3B%7D; _csrf-backend=6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu%22%3B%7D; advanced-backend=pdjmo65b2g4tc3nai53jffl56h; advanced-frontend=mre4r3p2mh0o4s3gdrnhm8dsek; PHPFRONTSESSID=re3kke5rab2vkcv3fh7q3ui1lv'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '56075'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/signup'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619210827.5203
+    'REQUEST_TIME' => 1619210827
+]
+2021-04-23 20:47:08 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][error][yii\base\ErrorException:256] yii\base\ErrorException: Exception 'Error' with message 'Typed property frontend\models\SignupForm::$email must not be accessed before initialization' 
+
+in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php:2248
+
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1363): yii\helpers\BaseHtml::getAttributeValue(Object(frontend\models\SignupForm), 'email')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1419): yii\helpers\BaseHtml::activeInput('text', Object(frontend\models\SignupForm), 'email', Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(frontend\models\SignupForm), 'email', Array)
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(207): yii\widgets\ActiveField->textInput()
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2-bootstrap/src/ActiveField.php(187): yii\widgets\ActiveField->render(NULL)
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(176): yii\bootstrap\ActiveField->render()
+#6 /usr/local/var/www/yii2/tumo/frontend/views/site/signup.php(24): yii\widgets\ActiveField->__toString()
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('signup', Array, Object(frontend\controllers\SiteController))
+#11 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(162): yii\base\Controller->render('signup', Array)
+#12 [internal function]: frontend\controllers\SiteController->actionSignup()
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#15 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('signup', Array)
+#16 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/signup', Array)
+#17 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#19 {main} in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/ErrorHandler.php:343
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/ErrorHandler.php(343): yii\web\ErrorHandler->handleError('256', ''Exception \\'Er...', ''/usr/local/var...', '343', '['exception' =>...')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/ErrorHandler.php(343): ::trigger_error(''Exception \\'Er...', '256')
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(181): yii\base\ErrorHandler::convertExceptionToError('class Error { p...')
+#3 /usr/local/var/www/yii2/tumo/frontend/views/site/signup.php(24): yii\bootstrap\ActiveField->__toString()
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): yii\web\View->unknown()
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\web\View->renderPhpFile(''/usr/local/var...', '['model' => cla...')
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\web\View->renderFile(''/usr/local/var...', '['model' => cla...', 'class frontend\\...')
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\web\View->render(''signup'', '['model' => cla...', 'class frontend\\...')
+#8 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(162): frontend\controllers\SiteController->render(''signup'', '['model' => cla...')
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): frontend\controllers\SiteController->actionSignup()
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): ::call_user_func_array:{/usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php:57}('[0 => class fro...', '[]')
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams('[]')
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): frontend\controllers\SiteController->runAction(''signup'', '[]')
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\web\Application->runAction(''site/signup'', '[]')
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest('class yii\\web\\R...')
+#15 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\web\Application->run()
+#16 {main}
+2021-04-23 20:47:08 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    '_csrf-frontend' => '0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pJ23prA83UqDf3q7P79oxMtC6F6migiH\";}'
+    '_csrf-backend' => '6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu\";}'
+    'advanced-backend' => 'pdjmo65b2g4tc3nai53jffl56h'
+    'advanced-frontend' => 'mre4r3p2mh0o4s3gdrnhm8dsek'
+    'PHPFRONTSESSID' => 're3kke5rab2vkcv3fh7q3ui1lv'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; _csrf-frontend=0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pJ23prA83UqDf3q7P79oxMtC6F6migiH%22%3B%7D; _csrf-backend=6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu%22%3B%7D; advanced-backend=pdjmo65b2g4tc3nai53jffl56h; advanced-frontend=mre4r3p2mh0o4s3gdrnhm8dsek; PHPFRONTSESSID=re3kke5rab2vkcv3fh7q3ui1lv'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '56075'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/signup'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619210828.1876
+    'REQUEST_TIME' => 1619210828
+]
+2021-04-23 20:47:08 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][error][yii\base\ErrorException:256] yii\base\ErrorException: Exception 'Error' with message 'Typed property frontend\models\SignupForm::$email must not be accessed before initialization' 
+
+in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php:2248
+
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1363): yii\helpers\BaseHtml::getAttributeValue(Object(frontend\models\SignupForm), 'email')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/helpers/BaseHtml.php(1419): yii\helpers\BaseHtml::activeInput('text', Object(frontend\models\SignupForm), 'email', Array)
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(407): yii\helpers\BaseHtml::activeTextInput(Object(frontend\models\SignupForm), 'email', Array)
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(207): yii\widgets\ActiveField->textInput()
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2-bootstrap/src/ActiveField.php(187): yii\widgets\ActiveField->render(NULL)
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(176): yii\bootstrap\ActiveField->render()
+#6 /usr/local/var/www/yii2/tumo/frontend/views/site/signup.php(24): yii\widgets\ActiveField->__toString()
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('signup', Array, Object(frontend\controllers\SiteController))
+#11 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(162): yii\base\Controller->render('signup', Array)
+#12 [internal function]: frontend\controllers\SiteController->actionSignup()
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#15 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('signup', Array)
+#16 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/signup', Array)
+#17 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#19 {main} in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/ErrorHandler.php:343
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/ErrorHandler.php(343): yii\web\ErrorHandler->handleError('256', ''Exception \\'Er...', ''/usr/local/var...', '343', '['exception' =>...')
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/ErrorHandler.php(343): ::trigger_error(''Exception \\'Er...', '256')
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/widgets/ActiveField.php(181): yii\base\ErrorHandler::convertExceptionToError('class Error { p...')
+#3 /usr/local/var/www/yii2/tumo/frontend/views/site/signup.php(24): yii\bootstrap\ActiveField->__toString()
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): yii\web\View->unknown()
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\web\View->renderPhpFile(''/usr/local/var...', '['model' => cla...')
+#6 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(156): yii\web\View->renderFile(''/usr/local/var...', '['model' => cla...', 'class frontend\\...')
+#7 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(410): yii\web\View->render(''signup'', '['model' => cla...', 'class frontend\\...')
+#8 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(162): frontend\controllers\SiteController->render(''signup'', '['model' => cla...')
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): frontend\controllers\SiteController->actionSignup()
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): ::call_user_func_array:{/usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php:57}('[0 => class fro...', '[]')
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams('[]')
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): frontend\controllers\SiteController->runAction(''signup'', '[]')
+#13 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\web\Application->runAction(''site/signup'', '[]')
+#14 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest('class yii\\web\\R...')
+#15 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\web\Application->run()
+#16 {main}
+2021-04-23 20:47:08 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    '_csrf-frontend' => '0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pJ23prA83UqDf3q7P79oxMtC6F6migiH\";}'
+    '_csrf-backend' => '6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu\";}'
+    'advanced-backend' => 'pdjmo65b2g4tc3nai53jffl56h'
+    'advanced-frontend' => 'mre4r3p2mh0o4s3gdrnhm8dsek'
+    'PHPFRONTSESSID' => 're3kke5rab2vkcv3fh7q3ui1lv'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; _csrf-frontend=0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pJ23prA83UqDf3q7P79oxMtC6F6migiH%22%3B%7D; _csrf-backend=6e884d5f9008fb8480c2daca60cfcf759eb86756b81c3a795bc6e1baa2171316a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Vi4ckBSwt7v_TQzhoCHykWRkbS8GX8Hu%22%3B%7D; advanced-backend=pdjmo65b2g4tc3nai53jffl56h; advanced-frontend=mre4r3p2mh0o4s3gdrnhm8dsek; PHPFRONTSESSID=re3kke5rab2vkcv3fh7q3ui1lv'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://test.owl/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '56075'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/site/signup'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619210828.5338
+    'REQUEST_TIME' => 1619210828
+]
+2021-04-23 21:59:46 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "/gii/model". in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('/gii/model', Array)
+#1 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#2 {main}
+2021-04-23 21:59:46 [127.0.0.1][-][re3kke5rab2vkcv3fh7q3ui1lv][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    '_csrf-frontend' => '0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"pJ23prA83UqDf3q7P79oxMtC6F6migiH\";}'
+    'advanced-backend' => 'pdjmo65b2g4tc3nai53jffl56h'
+    'advanced-frontend' => 'mre4r3p2mh0o4s3gdrnhm8dsek'
+    'PHPFRONTSESSID' => 're3kke5rab2vkcv3fh7q3ui1lv'
+    'PHPBACKSESSID' => 'ua6p6toh55sa7eehr8v716gduj'
+    '_backendUser' => '845b0270aa1b85c8f69ba8d455fe9528cb00380693d957d04b0554084fb409baa:2:{i:0;s:12:\"_backendUser\";i:1;s:46:\"[1,\"zhtOJ2Tky9Ux1n2tO8Fpv7yYgeN7ZS8x\",2592000]\";}'
+    '_csrf-backend' => '6255af2108a93278cecb0173bd2004943f1e34b6ae9960306f5af7c39ac0d68aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"-4Hz7BHExwGcSa6WCKUDIjnziZ6ZmHkS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; _csrf-frontend=0b33500803e99b832eeb64f4624118fedcc10798d9ee24d2f862080ace363946a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22pJ23prA83UqDf3q7P79oxMtC6F6migiH%22%3B%7D; advanced-backend=pdjmo65b2g4tc3nai53jffl56h; advanced-frontend=mre4r3p2mh0o4s3gdrnhm8dsek; PHPFRONTSESSID=re3kke5rab2vkcv3fh7q3ui1lv; PHPBACKSESSID=ua6p6toh55sa7eehr8v716gduj; _backendUser=845b0270aa1b85c8f69ba8d455fe9528cb00380693d957d04b0554084fb409baa%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_backendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22zhtOJ2Tky9Ux1n2tO8Fpv7yYgeN7ZS8x%22%2C2592000%5D%22%3B%7D; _csrf-backend=6255af2108a93278cecb0173bd2004943f1e34b6ae9960306f5af7c39ac0d68aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22-4Hz7BHExwGcSa6WCKUDIjnziZ6ZmHkS%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58728'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '//gii/model'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619215186.6863
+    'REQUEST_TIME' => 1619215186
+]
+2021-04-25 02:43:28 [127.0.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\assets\AppAsset' in file: /usr/local/var/www/yii2/tumo/frontend/assets/AppAsset.php. Namespace missing? in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\assets...')
+#1 /usr/local/var/www/yii2/tumo/frontend/views/layouts/main.php(13): spl_autoload_call('frontend\\assets...')
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#6 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(77): yii\base\Controller->render('index')
+#7 [internal function]: frontend\controllers\SiteController->actionIndex()
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('', Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#14 {main}
+2021-04-25 02:43:28 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    '_csrf-backend' => 'bf8f783b3114fc4b9b5b92bd2c0b644c086c6966beef7d8ed32f4f7867956975a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"LeKyy7hDOY9OnvltyhUcZ3dYC3F5bXYR\";}'
+    'PHPBACKSESSID' => '5vetajngffim383e5gl2nccv0h'
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; _csrf-backend=bf8f783b3114fc4b9b5b92bd2c0b644c086c6966beef7d8ed32f4f7867956975a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22LeKyy7hDOY9OnvltyhUcZ3dYC3F5bXYR%22%3B%7D; PHPBACKSESSID=5vetajngffim383e5gl2nccv0h'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '62672'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619318608.8627
+    'REQUEST_TIME' => 1619318608
+]
+2021-04-25 02:43:29 [127.0.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\assets\AppAsset' in file: /usr/local/var/www/yii2/tumo/frontend/assets/AppAsset.php. Namespace missing? in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\assets...')
+#1 /usr/local/var/www/yii2/tumo/frontend/views/layouts/main.php(13): spl_autoload_call('frontend\\assets...')
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#6 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(77): yii\base\Controller->render('index')
+#7 [internal function]: frontend\controllers\SiteController->actionIndex()
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('', Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#14 {main}
+2021-04-25 02:43:29 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    '_csrf-backend' => 'bf8f783b3114fc4b9b5b92bd2c0b644c086c6966beef7d8ed32f4f7867956975a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"LeKyy7hDOY9OnvltyhUcZ3dYC3F5bXYR\";}'
+    'PHPBACKSESSID' => '5vetajngffim383e5gl2nccv0h'
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; _csrf-backend=bf8f783b3114fc4b9b5b92bd2c0b644c086c6966beef7d8ed32f4f7867956975a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22LeKyy7hDOY9OnvltyhUcZ3dYC3F5bXYR%22%3B%7D; PHPBACKSESSID=5vetajngffim383e5gl2nccv0h'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '62672'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619318609.6257
+    'REQUEST_TIME' => 1619318609
+]
+2021-04-25 02:43:29 [127.0.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\assets\AppAsset' in file: /usr/local/var/www/yii2/tumo/frontend/assets/AppAsset.php. Namespace missing? in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\assets...')
+#1 /usr/local/var/www/yii2/tumo/frontend/views/layouts/main.php(13): spl_autoload_call('frontend\\assets...')
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#6 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(77): yii\base\Controller->render('index')
+#7 [internal function]: frontend\controllers\SiteController->actionIndex()
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('', Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#14 {main}
+2021-04-25 02:43:29 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    '_csrf-backend' => 'bf8f783b3114fc4b9b5b92bd2c0b644c086c6966beef7d8ed32f4f7867956975a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"LeKyy7hDOY9OnvltyhUcZ3dYC3F5bXYR\";}'
+    'PHPBACKSESSID' => '5vetajngffim383e5gl2nccv0h'
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; _csrf-backend=bf8f783b3114fc4b9b5b92bd2c0b644c086c6966beef7d8ed32f4f7867956975a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22LeKyy7hDOY9OnvltyhUcZ3dYC3F5bXYR%22%3B%7D; PHPBACKSESSID=5vetajngffim383e5gl2nccv0h'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '62672'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619318609.8776
+    'REQUEST_TIME' => 1619318609
+]
+2021-04-25 02:43:29 [127.0.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\assets\AppAsset' in file: /usr/local/var/www/yii2/tumo/frontend/assets/AppAsset.php. Namespace missing? in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\assets...')
+#1 /usr/local/var/www/yii2/tumo/frontend/views/layouts/main.php(13): spl_autoload_call('frontend\\assets...')
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#6 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(77): yii\base\Controller->render('index')
+#7 [internal function]: frontend\controllers\SiteController->actionIndex()
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('', Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#14 {main}
+2021-04-25 02:43:29 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    '_csrf-backend' => 'bf8f783b3114fc4b9b5b92bd2c0b644c086c6966beef7d8ed32f4f7867956975a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"LeKyy7hDOY9OnvltyhUcZ3dYC3F5bXYR\";}'
+    'PHPBACKSESSID' => '5vetajngffim383e5gl2nccv0h'
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; _csrf-backend=bf8f783b3114fc4b9b5b92bd2c0b644c086c6966beef7d8ed32f4f7867956975a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22LeKyy7hDOY9OnvltyhUcZ3dYC3F5bXYR%22%3B%7D; PHPBACKSESSID=5vetajngffim383e5gl2nccv0h'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '62673'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619318609.9396
+    'REQUEST_TIME' => 1619318609
+]
+2021-04-25 02:43:30 [127.0.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\assets\AppAsset' in file: /usr/local/var/www/yii2/tumo/frontend/assets/AppAsset.php. Namespace missing? in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\assets...')
+#1 /usr/local/var/www/yii2/tumo/frontend/views/layouts/main.php(13): spl_autoload_call('frontend\\assets...')
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#6 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(77): yii\base\Controller->render('index')
+#7 [internal function]: frontend\controllers\SiteController->actionIndex()
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('', Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#14 {main}
+2021-04-25 02:43:30 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    '_csrf-backend' => 'bf8f783b3114fc4b9b5b92bd2c0b644c086c6966beef7d8ed32f4f7867956975a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"LeKyy7hDOY9OnvltyhUcZ3dYC3F5bXYR\";}'
+    'PHPBACKSESSID' => '5vetajngffim383e5gl2nccv0h'
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; _csrf-backend=bf8f783b3114fc4b9b5b92bd2c0b644c086c6966beef7d8ed32f4f7867956975a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22LeKyy7hDOY9OnvltyhUcZ3dYC3F5bXYR%22%3B%7D; PHPBACKSESSID=5vetajngffim383e5gl2nccv0h'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '62680'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619318610.0373
+    'REQUEST_TIME' => 1619318610
+]
+2021-04-25 02:43:30 [127.0.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\assets\AppAsset' in file: /usr/local/var/www/yii2/tumo/frontend/assets/AppAsset.php. Namespace missing? in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\assets...')
+#1 /usr/local/var/www/yii2/tumo/frontend/views/layouts/main.php(13): spl_autoload_call('frontend\\assets...')
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#6 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(77): yii\base\Controller->render('index')
+#7 [internal function]: frontend\controllers\SiteController->actionIndex()
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('', Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#14 {main}
+2021-04-25 02:43:30 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    '_csrf-backend' => 'bf8f783b3114fc4b9b5b92bd2c0b644c086c6966beef7d8ed32f4f7867956975a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"LeKyy7hDOY9OnvltyhUcZ3dYC3F5bXYR\";}'
+    'PHPBACKSESSID' => '5vetajngffim383e5gl2nccv0h'
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; _csrf-backend=bf8f783b3114fc4b9b5b92bd2c0b644c086c6966beef7d8ed32f4f7867956975a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22LeKyy7hDOY9OnvltyhUcZ3dYC3F5bXYR%22%3B%7D; PHPBACKSESSID=5vetajngffim383e5gl2nccv0h'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '62682'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619318610.0983
+    'REQUEST_TIME' => 1619318610
+]
+2021-04-25 02:43:30 [127.0.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\assets\AppAsset' in file: /usr/local/var/www/yii2/tumo/frontend/assets/AppAsset.php. Namespace missing? in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\assets...')
+#1 /usr/local/var/www/yii2/tumo/frontend/views/layouts/main.php(13): spl_autoload_call('frontend\\assets...')
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#6 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(77): yii\base\Controller->render('index')
+#7 [internal function]: frontend\controllers\SiteController->actionIndex()
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('', Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#14 {main}
+2021-04-25 02:43:30 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    '_csrf-backend' => 'bf8f783b3114fc4b9b5b92bd2c0b644c086c6966beef7d8ed32f4f7867956975a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"LeKyy7hDOY9OnvltyhUcZ3dYC3F5bXYR\";}'
+    'PHPBACKSESSID' => '5vetajngffim383e5gl2nccv0h'
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; _csrf-backend=bf8f783b3114fc4b9b5b92bd2c0b644c086c6966beef7d8ed32f4f7867956975a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22LeKyy7hDOY9OnvltyhUcZ3dYC3F5bXYR%22%3B%7D; PHPBACKSESSID=5vetajngffim383e5gl2nccv0h'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '62685'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619318610.1421
+    'REQUEST_TIME' => 1619318610
+]
+2021-04-25 02:43:30 [127.0.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\assets\AppAsset' in file: /usr/local/var/www/yii2/tumo/frontend/assets/AppAsset.php. Namespace missing? in /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\assets...')
+#1 /usr/local/var/www/yii2/tumo/frontend/views/layouts/main.php(13): spl_autoload_call('frontend\\assets...')
+#2 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(348): require('/usr/local/var/...')
+#3 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/usr/local/var/...', Array)
+#4 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/usr/local/var/...', Array, Object(frontend\controllers\SiteController))
+#5 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('<div class="sit...')
+#6 /usr/local/var/www/yii2/tumo/frontend/controllers/SiteController.php(77): yii\base\Controller->render('index')
+#7 [internal function]: frontend\controllers\SiteController->actionIndex()
+#8 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#10 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('', Array)
+#11 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('', Array)
+#12 /usr/local/var/www/yii2/tumo/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /usr/local/var/www/yii2/tumo/frontend/web/index.php(17): yii\base\Application->run()
+#14 {main}
+2021-04-25 02:43:30 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'zcart_cookie_consent' => '1'
+    '_csrf-backend' => 'bf8f783b3114fc4b9b5b92bd2c0b644c086c6966beef7d8ed32f4f7867956975a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"LeKyy7hDOY9OnvltyhUcZ3dYC3F5bXYR\";}'
+    'PHPBACKSESSID' => '5vetajngffim383e5gl2nccv0h'
+]
+
+$_SERVER = [
+    'USER' => 'macbookpro'
+    'HOME' => '/Users/macbookpro'
+    'HTTP_COOKIE' => 'zcart_cookie_consent=1; _csrf-backend=bf8f783b3114fc4b9b5b92bd2c0b644c086c6966beef7d8ed32f4f7867956975a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22LeKyy7hDOY9OnvltyhUcZ3dYC3F5bXYR%22%3B%7D; PHPBACKSESSID=5vetajngffim383e5gl2nccv0h'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,hy;q=0.6,fr;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'test.owl'
+    'SCRIPT_FILENAME' => '/usr/local/var/www/yii2/tumo/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'test.owl'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '62687'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.19.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/usr/local/var/www/yii2/tumo'
+    'DOCUMENT_URI' => '/frontend/web/index.php'
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1619318610.1509
+    'REQUEST_TIME' => 1619318610
+]

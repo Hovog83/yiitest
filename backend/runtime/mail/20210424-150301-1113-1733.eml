@@ -1,0 +1,49 @@
+Message-ID: <cc3ed2f79cc792659b5ed04eb844983b@test.owl>
+Date: Sat, 24 Apr 2021 15:03:01 +0000
+Subject: Message subject
+From: from@domain.com
+To: user8@gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_1619276581_f6c3d95372f23120c0ced2104b2f63a2_=_"
+
+
+--_=_swift_1619276581_f6c3d95372f23120c0ced2104b2f63a2_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello ,
+
+Follow the link below to verify your email:
+
+Test
+
+--_=_swift_1619276581_f6c3d95372f23120c0ced2104b2f63a2_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/=
+xhtml">
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/ht=
+ml; charset=3DUTF-8" />
+    <title></title>
+    </head>
+<body>
+    =
+    <div class=3D"verify-email">
+=09<p>Hello ,</p>
+
+=09<p>Follow the =
+link below to verify your email:</p>
+
+=09<p> Test </p>
+</div>
+    <=
+/body>
+</html>
+
+
+--_=_swift_1619276581_f6c3d95372f23120c0ced2104b2f63a2_=_--
